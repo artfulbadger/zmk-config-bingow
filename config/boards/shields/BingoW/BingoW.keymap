@@ -1,0 +1,51 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bingings/zmk/bt.h>
+
+#define DEFAULT 0
+#define LOWER 1
+#define RAISE 2
+#define BT 3
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp '       &kp ,       &kp .       &kp p           &kp y       &kp f               &kp g           &kp c       &kp r       &kp l
+                &kp a       &kp o       &kp e       &kp u           &kp i       &kp d               &kp h           &kp t       &kp n       &kp s
+                &kp ;       &kp q       &kp j       &kp k           &kp x       &kp b               &kp m           &kp w       &kp v       &kp z
+                                        &kp ALT     &kp COMMAND     &kp SHIFT   &lt LOWER SPACE     &mo LOWER       &mo RAISE
+                
+            >;
+        };
+
+        lower_layer {
+            bindings = <
+                &kp 1       &kp 2       &kp 3       &kp 4           &kp 5       &kp 6               &kp 7           &kp 8       &kp 9       &kp 0
+                &kp !       &kp @       &kp #       &kp $           &kp %       &kp ^               &kp &           &kp *       &kp (       &kp )
+                &kp +       &kp -       &kp =       &kp {           &kp }       &kp [               &kp ]           &kp |       &kp /       &kp ?
+                                        &kp ALT     &kp COMMAND     &kp SHIFT   &lt LOWER SPACE     &mo DEFAULT     &mo RAISE
+            >;
+        }:
+
+        raise_layer {
+            bindings = <
+                &kp ESC     &kp ,       &kp .       &kp p           &kp y       &kp f               &kp g           &kp c       &kp r       &kp DEL
+                &kp TAB     &kp o       &kp e       &kp u           &kp i       &kp d               &kp h           &kp t       &kp n       &kp ENTER
+                &kp `       &kp q       &kp j       &kp k           &kp x       &kp b               &kp m           &kp w       &kp v       &kp z
+                                        &kp ALT     &kp COMMAND     &kp SHIFT   &lt LOWER SPACE     &mo LOWER       &mo Bt
+            >;
+        }:
+
+        bt_layer {
+            bingings = <
+                &BT_CLR         &none           &none           &none           &none           &none               &none           &none       &none       &bootloader
+                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SELT 4   &none               &none           &none       &none       &none
+                &none           &none           &none           &none           &none           &none               &none           &none       &none       &kp z
+                                                &kp ALT         &kp COMMAND     &kp SHIFT       &lt LOWER SPACE     &mo LOWER       &mo RAISE
+            >;
+        };
+    };
+};

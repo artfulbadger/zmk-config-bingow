@@ -1,0 +1,6 @@
+if SHIELD_BINGOW
+
+config ZMK_KEYBOARD_NAME
+    default "BingoW"
+
+endif
