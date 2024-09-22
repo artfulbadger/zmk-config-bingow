@@ -1,50 +1,40 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/reset.h>
 
-#define DEFAULT 0
+#define BASE 0
 #define LOWER 1
 #define RAISE 2
 #define BT 3
 
 / {
-    keymap {
-        compatible = "zmk,keymap";
+  keymap {
+    compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = <
-                &kp APOS    &kp COMMA   &kp DOT     &kp P           &kp Y           &kp F               &kp G           &kp C       &kp R       &kp L
-                &kp A       &kp O       &kp E       &kp U           &kp I           &kp D               &kp H           &kp T       &kp N       &kp S
-                &kp SEMI    &kp Q       &kp J       &kp K           &kp X           &kp B               &kp M           &kp W       &kp V       &kp Z
-                                        &kp LALT    &kp LCMD        &kp LSHIFT      &lt LOWER SPACE     &mo LOWER       &mo RAISE
-            >;
-        };
-
-        lower_layer {
-            bindings = <
-                &kp N1      &kp N2      &kp N3      &kp N4          &kp N5          &kp N6              &kp N7          &kp N8      &kp N9      &kp N0
-                &kp EXCL    &kp AT      &kp HASH    &kp DLLR        &kp PRCNT       &kp CARET           &kp AMPS        &kp STAR    &kp LPAR    &kp RPAR
-                &kp PLUS    &kp MINUS   &kp EQUAL   &kp LBRC        &kp RBRC        &kp LBKT            &kp RBKT        &kp BSLH    &kp FSLH    &kp QMARK
-                                        &kp LALT    &kp LCMD        &kp LSHIFT      &none               &mo DEFAULT     &mo RAISE
-            >;
-        };
-
-        raise_layer {
-            bindings = <
-                &kp ESC     &none       &none       &none           &none           &none               &none           &none       &none       &kp DEL
-                &kp TAB     &none       &none       &none           &none           &none               &none           &none       &none       &kp ENTER
-                &none       &none       &none       &none           &none           &none               &none           &none       &none       &none
-                                        &kp LALT    &kp LCMD        &kp LSHIFT      &lt LOWER SPACE     &mo LOWER       &mo BT
-            >;
-        };
-
-        bt_layer {
-            bingings = <
-                &bt BT_CLR      &none           &none           &none           &none           &none               &none           &none       &none       &kp BOOTLOADER
-                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SELT 4   &none               &none           &none       &none       &none
-                &none           &none           &none           &none           &none           &none               &none           &none       &none       &kp z
-                                                &kp LALT        &kp LCMD        &kp LSHIFT      &lt LOWER SPACE     &mo LOWER       &mo RAISE
-            >;
-        };
+    Base_layer {
+      bindings = <
+        &kp SINGLE_QUOTE &kp COMMA &kp DOT &kp P &kp Y &kp F &kp G &kp C &kp R &kp L &kp A &kp O &kp E &kp U &kp I &kp D &kp H &kp T &kp N &kp S &kp SEMICOLON &kp Q &kp J &kp K &kp X &kp B &kp M &kp W &kp V &kp Z &none &none &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &lt LOWER SPACE &to LOWER &to RAISE &none &none 
+      >;
     };
+
+    Lower_layer {
+      bindings = <
+        &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp PLUS &kp MINUS &kp EQUAL &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &kp SLASH &kp QUESTION &none &none &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &kp SPACE &to BASE &to RAISE &none &none 
+      >;
+    };
+
+    Raise_layer {
+      bindings = <
+        &kp ESCAPE &none &none &none &none &none &none &kp UP &none &kp DEL &kp TAB &none &none &none &none &none &kp LEFT &kp DOWN &kp RIGHT &kp RETURN &none &none &none &none &none &none &none &none &none &none &none &none &to BT &none &none &kp SPACE &to LOWER &to BASE &none &none 
+      >;
+    };
+
+    BT_layer {
+      bindings = <
+        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &none &none &none &none &bt BT_CLR &none &none &none &none &none &none &none &none &none &none &bootloader &none &none &none &none &none &none &none &none &none &none &none &none &none &none &to BASE &none &none &none &none 
+      >;
+    };
+
+  };
 };
