@@ -34,7 +34,7 @@
                 &kp ESC     &none       &none       &none           &none           &none               &none           &none       &none       &kp DEL
                 &kp TAB     &none       &none       &none           &none           &none               &none           &none       &none       &kp ENTER
                 &none       &none       &none       &none           &none           &none               &none           &none       &none       &none
-                                        &kp LALT    &kp LCMD        &kp LSHIFT      &lt LOWER SPACE     &mo LOWER       &mo Bt
+                                        &kp LALT    &kp LCMD        &kp LSHIFT      &lt LOWER SPACE     &mo LOWER       &mo BT
             >;
         };
 
