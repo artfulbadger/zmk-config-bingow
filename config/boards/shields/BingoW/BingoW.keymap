@@ -13,29 +13,28 @@
 
         default_layer {
             bindings = <
-                &kp '       &kp ,       &kp .       &kp p           &kp y       &kp f               &kp g           &kp c       &kp r       &kp l
-                &kp a       &kp o       &kp e       &kp u           &kp i       &kp d               &kp h           &kp t       &kp n       &kp s
-                &kp ;       &kp q       &kp j       &kp k           &kp x       &kp b               &kp m           &kp w       &kp v       &kp z
-                                        &kp ALT     &kp COMMAND     &kp SHIFT   &lt LOWER SPACE     &mo LOWER       &mo RAISE
-                
+                &kp APOS    &kp COMMA   &kp DOT     &kp p           &kp y           &kp f               &kp g           &kp c       &kp r       &kp l
+                &kp a       &kp o       &kp e       &kp u           &kp i           &kp d               &kp h           &kp t       &kp n       &kp s
+                &kp SEMI    &kp q       &kp j       &kp k           &kp x           &kp b               &kp m           &kp w       &kp v       &kp z
+                                        &kp LALT    &kp LCMD        &kp LSHIFT      &lt LOWER SPACE     &mo LOWER       &mo RAISE
             >;
         };
 
         lower_layer {
             bindings = <
-                &kp 1       &kp 2       &kp 3       &kp 4           &kp 5       &kp 6               &kp 7           &kp 8       &kp 9       &kp 0
-                &kp !       &kp @       &kp #       &kp $           &kp %       &kp ^               &kp &           &kp *       &kp (       &kp )
-                &kp +       &kp -       &kp =       &kp {           &kp }       &kp [               &kp ]           &kp |       &kp /       &kp ?
-                                        &kp ALT     &kp COMMAND     &kp SHIFT   &lt LOWER SPACE     &mo DEFAULT     &mo RAISE
+                &kp N1      &kp N2      &kp N3      &kp N4          &kp N5          &kp N6              &kp N7          &kp N8      &kp N9      &kp N0
+                &kp EXCL    &kp AT      &kp HASH    &kp DLLR        &kp PRCNT       &kp CARET           &kp AMPS        &kp STAR    &kp LPAR    &kp RPAR
+                &kp PLUS    &kp MINUS   &kp EQUAL   &kp LBRC        &kp RBRC        &kp LBKT            &kp RBKT        &kp BSLH    &kp FSLH    &kp QMARK
+                                        &kp LALT    &kp LCMD        &kp LSHIFT      &none               &mo DEFAULT     &mo RAISE
             >;
         }:
 
         raise_layer {
             bindings = <
-                &kp ESC     &kp ,       &kp .       &kp p           &kp y       &kp f               &kp g           &kp c       &kp r       &kp DEL
-                &kp TAB     &kp o       &kp e       &kp u           &kp i       &kp d               &kp h           &kp t       &kp n       &kp ENTER
-                &kp `       &kp q       &kp j       &kp k           &kp x       &kp b               &kp m           &kp w       &kp v       &kp z
-                                        &kp ALT     &kp COMMAND     &kp SHIFT   &lt LOWER SPACE     &mo LOWER       &mo Bt
+                &kp ESC     &none       &none       &none           &none           &none               &none           &none       &none       &kp DEL
+                &kp TAB     &none       &none       &none           &none           &none               &none           &none       &none       &kp ENTER
+                &none       &none       &none       &none           &none           &none               &none           &none       &none       &none
+                                        &kp LALT    &kp LCMD        &kp LSHIFT      &lt LOWER SPACE     &mo LOWER       &mo Bt
             >;
         }:
 
@@ -44,7 +43,7 @@
                 &BT_CLR         &none           &none           &none           &none           &none               &none           &none       &none       &bootloader
                 &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SELT 4   &none               &none           &none       &none       &none
                 &none           &none           &none           &none           &none           &none               &none           &none       &none       &kp z
-                                                &kp ALT         &kp COMMAND     &kp SHIFT       &lt LOWER SPACE     &mo LOWER       &mo RAISE
+                                                &kp LALT        &kp LCMD        &kp LSHIFT      &lt LOWER SPACE     &mo LOWER       &mo RAISE
             >;
         };
     };
