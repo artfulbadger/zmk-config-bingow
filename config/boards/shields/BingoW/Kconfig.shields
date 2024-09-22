@@ -1,2 +1,0 @@
-config SHIELD_BINGOW
-    def_bool(shield_contains, BingoW)
