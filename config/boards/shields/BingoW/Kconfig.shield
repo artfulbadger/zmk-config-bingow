@@ -1,2 +1,2 @@
 config SHIELD_BINGOW
-    def_bool(shield_contains,BingoW)
+    def_bool $(shield_contains,BingoW)
