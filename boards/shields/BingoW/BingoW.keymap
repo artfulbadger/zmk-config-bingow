@@ -23,7 +23,7 @@
         &kp SINGLE_QUOTE    &kp COMMA   &kp DOT     &kp P       &kp Y       &kp F       &kp G       &kp C       &kp R       &kp L 
         &kp A               &kp O       &kp E       &kp U       &kp I       &kp D       &kp H       &kp T       &kp N       &kp S 
         &kp SEMICOLON       &kp Q       &kp J       &kp K       &kp X       &kp B       &kp M       &kp W       &kp V       &kp Z 
-        &kp LEFT_ALT        &kp LEFT_GUI    &kp LEFT_SHIFT      &lt LOWER SPACE     &kp BACKSPACE   &to RAISE 
+        &kp LEFT_ALT        &kp LEFT_GUI    &kp LEFT_SHIFT      &lt LOWER SPACE     &lt RAISE BACKSPACE   &to RAISE 
       >;
     };
 
@@ -37,7 +37,7 @@
       bindings = <        &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 
         &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS 
         &kp PLUS &kp MINUS &kp EQUAL &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &kp SLASH &kp QUESTION 
-        &kp LEFT_ALT &kp LEFT_GUI &kp LEFT_SHIFT &kp SPACE &to BASE &to RAISE 
+        &kp LEFT_ALT &kp LEFT_GUI &kp CAPS &kp SPACE &to BASE &to RAISE 
       >;
     };
 
