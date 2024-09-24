@@ -42,17 +42,17 @@
     };
 
     Raise_layer {
-        // ESC      /       /       /       /       /       /       up      /       / 
-        // !        @       #       $       %       ^       left    down    right   Return
-        // +        -       =       {       }       [       ]       \       /       ?
-        //                  ALT     CMD     SHFT    SPC     Lower   Raise 
+        // ESC      /       /       /       /       /       /       up      /       BACKSPACE 
+        // TAB      /       /       /       /       /       left    down    right   Return
+        // /        /       /       /       /       BT      MEDIA   /       /       /
+        //                  ALT     CMD     SHFT    SPC     Lower   Base 
         //
 
       bindings = <
         &kp ESCAPE &none &none &none &none &none &none &kp UP &none &kp BACKSPACE 
         &kp TAB &none &none &none &none &none &kp LEFT &kp DOWN &kp RIGHT &kp RETURN 
-        &none &none &none &none &none &none &none &none &none &none 
-        &to BT &none &none &kp SPACE &to LOWER &to BASE 
+        &none &none &none &none &none &to BT &none &none &none &none 
+        &kp LEFT_ALT &kp LEFT_GUI &none &kp SPACE &to LOWER &to BASE 
       >;
     };
 
