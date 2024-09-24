@@ -1,7 +1,7 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/reset.h>
+#include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
 #define LOWER 1
@@ -35,6 +35,5 @@
         &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &none &none &none &none &bt BT_CLR &none &none &none &none &none &none &none &none &none &none &bootloader &none &none &none &none &none &none &none &none &none &none &none &none &none &none &to BASE &none &none &none &none 
       >;
     };
-
   };
 };
