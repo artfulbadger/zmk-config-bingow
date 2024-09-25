@@ -50,10 +50,10 @@
         //
 
       bindings = <
-        &kp ESCAPE      &none       &none           &none           &none   &none       &none       &kp UP      &BACKSPACE  &kp DELETE 
-        &kp TAB         &kp GRAVE   &none           &none           &none   &none       &kp LEFT    &kp DOWN    &kp RIGHT   &kp RETURN 
-        &kp LEFT_SHIFT  &none       &none           &none           &none   &to BT      &none       &none       &none       &none 
-                                    &kp LEFT_ALT    &kp LEFT_GUI    &none   &kp SPACE   &to LOWER   &to BASE 
+        &kp ESCAPE      &none       &none           &none           &none       &none       &none       &kp UP      &kp BACKSPACE   &kp DELETE 
+        &kp TAB         &kp GRAVE   &none           &none           &none       &none       &kp LEFT    &kp DOWN    &kp RIGHT       &kp RETURN 
+        &kp LEFT_SHIFT  &none       &none           &none           &none       &to BT      &none       &none       &none           &none 
+                                    &kp LEFT_ALT    &kp LEFT_GUI    &kp CAPS    &kp SPACE   &to LOWER   &to BASE 
       >;
     };
 
