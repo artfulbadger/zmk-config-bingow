@@ -8,6 +8,11 @@
 #define RAISE 2
 #define BT 3
 
+&nice_view_spi {
+    rotation = <270>;
+    update_interval_ms = <33>;
+};
+
 / {
   keymap {
     compatible = "zmk,keymap";
