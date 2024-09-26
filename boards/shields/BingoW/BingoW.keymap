@@ -9,7 +9,6 @@
 #define BT 3
 
 &nice_view_spi {
-    rotation = <270>;
     update_interval_ms = <33>;
     cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
 };
@@ -65,9 +64,9 @@
 
     BT_layer {
       bindings = <
-        &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 5    &none       &none   &none   &none   &bt BT_CLR 
-        &none           &none           &none           &none           &none           &none       &none   &none   &none   &none 
-        &bootloader     &none           &none           &none           &none           &none       &none   &none   &none   &none 
+        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &none       &none   &bt BT_NXT  &none   &bt BT_CLR 
+        &none           &none           &none           &none           &none           &none       &none   &bt BT_PRV  &none   &none 
+        &bootloader     &none           &none           &none           &none           &none       &none   &none       &none   &none 
                                         &none           &none           &none           &to BASE    &none   &none 
       >;
     };
