@@ -8,10 +8,10 @@
 #define RAISE 2
 #define BT 3
 
-&nice_view_spi {
-    update_interval_ms = <33>;
-    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
-};
+//&nice_view_spi {
+//    update_interval_ms = <33>;
+//    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
+//};
 
 / {
   keymap {
