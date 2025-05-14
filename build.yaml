@@ -18,5 +18,4 @@
 #
 ---
 board: [ "nice_nano_v2" ]
-shield: [ "BingoW", "nice_view_adapter", "nice_view" ]
-snippet: [ "zmk-usb-logging" ]
+shield: [ "BingoW nice_view_adapter nice_view" ]
