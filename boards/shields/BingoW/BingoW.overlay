@@ -40,4 +40,41 @@
                             RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(3,6) RC(3,7)
         >;
     };
+
+    &pinctrl {
+        spi0_default: spi0_default {
+            group1 {
+                psels = <NRF_PSEL(SPIM_SCK, 0, 9)>,   // Pin 3 (D0) on Nice!Nano
+                       <NRF_PSEL(SPIM_MOSI, 0, 10)>,  // Pin 2 (D1) on Nice!Nano
+                       <NRF_PSEL(SPIM_MISO, 0, 10)>;  // We reuse MOSI for MISO as it's not used
+            };
+        };
+
+        spi0_sleep: spi0_sleep {
+            group1 {
+                psels = <NRF_PSEL(SPIM_SCK, 0, 9)>,
+                       <NRF_PSEL(SPIM_MOSI, 0, 10)>,
+                       <NRF_PSEL(SPIM_MISO, 0, 10)>;
+                low-power-enable;
+            };
+        };
+    };
+
+    &spi0 {
+        compatible = "nordic,nrf-spim";
+        status = "okay";
+        pinctrl-0 = <&spi0_default>;
+        pinctrl-1 = <&spi0_sleep>;
+        pinctrl-names = "default", "sleep";
+        cs-gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;  // Pin 1 (TX0) on Nice!Nano
+
+        nice_view: ls0xx@0 {
+            compatible = "sharp,ls0xx";
+            label = "DISPLAY";
+            spi-max-frequency = <1000000>;
+            reg = <0>;
+            width = <160>;
+            height = <68>;
+        };
+    };
 };
